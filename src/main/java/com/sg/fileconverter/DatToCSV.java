@@ -14,7 +14,7 @@ public class DatToCSV {
     
     public static final String DELIMITER = "#";
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Scanner scanner = null;
         List<String> datFileList = new ArrayList<>();
         String FILE_NAME = "File.dat";

@@ -19,7 +19,6 @@ public class DatToCSV {
         List<String> datFileList = new ArrayList<>();
         String FILE_NAME = "File.dat";
        try {
-//            // Create Scanner for reading the file
             scanner = new Scanner(
                     new BufferedReader(
                             new FileReader(FILE_NAME)));

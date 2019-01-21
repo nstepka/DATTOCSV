@@ -42,8 +42,9 @@ public class DatToCSV {
         } catch (IOException ex) {
            ex.printStackTrace();
         }
-        for (String lines : datFile) {
-            csvWriter.println(datFile);
+        for(int x = 0; x <= datFile.size()-1; x++) {
+            String Sample = datFile.get(x);
+            csvWriter.println(Sample);
             csvWriter.flush();
         }
         csvWriter.close();

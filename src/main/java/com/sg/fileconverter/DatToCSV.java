@@ -36,12 +36,12 @@ public class DatToCSV {
         convertDatToCsv("csvfile.csv", datFileList);
     }
 
-    public static void convertDatToCsv(String FileName, List<String> datFile) throws IOException {
+    public static void convertDatToCsv(String FileName, List<String> datFile) {
         PrintWriter csvWriter = null;
         try {
             csvWriter = new PrintWriter(new FileWriter(FileName));
         } catch (IOException ex) {
-            throw new IOException("Could not save dat file data", ex);
+           ex.printStackTrace();
         }
         for (String lines : datFile) {
             csvWriter.println(datFile);

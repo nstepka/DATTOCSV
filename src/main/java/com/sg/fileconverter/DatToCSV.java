@@ -23,7 +23,6 @@ public class DatToCSV {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        String datFileLine;
 
         while (scanner.hasNextLine()) {
 

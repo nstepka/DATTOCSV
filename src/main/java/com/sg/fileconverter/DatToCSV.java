@@ -19,8 +19,8 @@ public class DatToCSV {
             scanner = new Scanner(
                     new BufferedReader(
                             new FileReader(FILE_NAME)));
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
 
         while (scanner.hasNextLine()) {

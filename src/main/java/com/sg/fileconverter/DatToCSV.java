@@ -11,25 +11,23 @@ import java.util.List;
 import java.util.Scanner;
 
 public class DatToCSV {
-    
-    public static final String DELIMITER = "#";
 
     public static void main(String[] args) {
         Scanner scanner = null;
         List<String> datFileList = new ArrayList<>();
         String FILE_NAME = "File.dat";
-       try {
+        try {
             scanner = new Scanner(
                     new BufferedReader(
                             new FileReader(FILE_NAME)));
-       } catch (IOException e) {
-			e.printStackTrace();
-		}
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         String datFileLine;
 
         while (scanner.hasNextLine()) {
-            datFileLine = scanner.nextLine();
-            datFileList.add(datFileLine);
+
+            datFileList.add(scanner.nextLine());
         }
         scanner.close();
         convertDatToCsv("csvfile.csv", datFileList);
@@ -40,9 +38,9 @@ public class DatToCSV {
         try {
             csvWriter = new PrintWriter(new FileWriter(FileName));
         } catch (IOException ex) {
-           ex.printStackTrace();
+            ex.printStackTrace();
         }
-        for(int x = 0; x <= datFile.size()-1; x++) {
+        for (int x = 0; x <= datFile.size() - 1; x++) {
             String Sample = datFile.get(x);
             csvWriter.println(Sample);
             csvWriter.flush();
